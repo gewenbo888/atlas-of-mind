@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Atlas of Mind · 思维之图 — A monument to brain, thinking, and the future of cognition</title>
+
+<meta name="description" content="The Atlas of Mind is a bilingual (English ↔ 中文) digital institution dedicated to the brain, thinking methods, mental models, learning science, decision-making, creativity, consciousness, and the future of intelligence. A cathedral of cognition.">
+<meta name="keywords" content="brain, thinking methods, mental models, cognitive science, neuroscience, learning science, decision making, creativity, consciousness, intelligence, critical thinking, systems thinking, 大脑, 思维方式, 思维模型, 认知科学, 神经科学, 学习科学, 决策, 创造力, 意识, 智能">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://mindatlas.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://mindatlas.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://mindatlas.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://mindatlas.psyverse.fun/">
+<meta property="og:title" content="The Atlas of Mind · 思维之图">
+<meta property="og:description" content="A bilingual digital institution dedicated to the brain, thinking methods, and the future of cognition. Mental models · learning science · decision · creativity · consciousness · brain-AI.">
+<meta property="og:url" content="https://mindatlas.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Atlas of Mind · 思维之图">
+<meta name="twitter:description" content="A monument to the human mind. Bilingual EN/中文.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#08080d">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"The Atlas of Mind","alternateName":"思维之图","description":"A bilingual digital institution dedicated to brain, thinking methods, cognition, and the future of mind.","url":"https://mindatlas.psyverse.fun/","inLanguage":["en","zh-CN"],"author":{"@type":"Person","name":"Gewenbo","url":"https://psyverse.fun/"},"publisher":{"@type":"Organization","name":"Psyverse","url":"https://psyverse.fun/"}}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2308080d'/><circle cx='16' cy='16' r='10' fill='none' stroke='%23d4af37' stroke-width='1.2'/><circle cx='16' cy='10' r='2' fill='%23d4af37'/><circle cx='10' cy='20' r='2' fill='%23d4af37'/><circle cx='22' cy='20' r='2' fill='%23d4af37'/><line x1='16' y1='10' x2='10' y2='20' stroke='%23d4af37' stroke-width='0.7'/><line x1='10' y1='20' x2='22' y2='20' stroke='%23d4af37' stroke-width='0.7'/><line x1='22' y1='20' x2='16' y2='10' stroke='%23d4af37' stroke-width='0.7'/></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #08080d;
+  --bg-2: #0e0e18;
+  --bg-3: #16172a;
+  --line: #1f2138;
+  --line-2: #2c2f4d;
+  --fg: #ece8d8;
+  --fg-2: #b3ad96;
+  --fg-3: #6b6655;
+  --gold: #d4af37;
+  --gold-glow: #d4af3744;
+  --neural: #7dd3fc;
+  --warm: #f59e0b;
+  --rose: #fb7185;
+  --emerald: #34d399;
+  --shadow: rgba(0,0,0,.5);
+}
+body.light {
+  --bg: #fafaf2;
+  --bg-2: #f3f1e3;
+  --bg-3: #ebe6cf;
+  --line: #d8cfa8;
+  --line-2: #b3a778;
+  --fg: #1a1a2e;
+  --fg-2: #4a4538;
+  --fg-3: #6b6655;
+  --gold: #a07820;
+  --neural: #0369a1;
+  --warm: #b45309;
+  --rose: #be123c;
+  --emerald: #047857;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: background .4s, color .4s;
+}
+.mono { font-family: 'JetBrains Mono', monospace; }
+.serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; }
+.sans { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; }
+
+/* Ambient background — neural constellation */
+#neural-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.55; }
+body::after {
+  content: ''; position: fixed; inset: 0;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(212,175,55,.07), transparent 50%),
+    radial-gradient(circle at 82% 92%, rgba(125,211,252,.05), transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+
+/* Nav */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 60px;
+  background: rgba(8,8,13,.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+  display: flex; align-items: center;
+  padding: 0 28px; gap: 16px;
+  transition: background .4s, border-color .4s;
+}
+body.light nav { background: rgba(250,250,242,.85); }
+nav .brand {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex; align-items: center; gap: 12px;
+  color: var(--fg); text-decoration: none;
+  white-space: nowrap;
+}
+nav .brand .glyph {
+  width: 26px; height: 26px;
+  flex-shrink: 0;
+}
+nav .brand .glyph svg { display: block; width: 100%; height: 100%; }
+.brand-zh { display: none; font-family: 'Noto Serif SC', serif; font-style: normal; }
+body.zh-mode .brand-en { display: none; }
+body.zh-mode .brand-zh { display: inline; }
+
+nav .links {
+  display: flex; gap: 18px;
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+nav .links a { color: var(--fg-2); text-decoration: none; transition: color .15s; }
+nav .links a:hover { color: var(--gold); }
+nav .ctl-group { display: flex; gap: 8px; }
+nav button.ctl {
+  background: transparent; color: var(--fg-2);
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+  padding: 7px 13px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all .15s;
+  letter-spacing: 0.04em;
+}
+nav button.ctl:hover { color: var(--gold); border-color: var(--gold); }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.narrow { max-width: 820px; }
+
+/* Bilingual via class */
+.zh { display: none; }
+body.zh-mode .en { display: none; }
+body.zh-mode .zh { display: revert; }
+
+/* Inline language pair (always together) */
+.bling .en, .bling .zh { display: inline; }
+body.zh-mode .bling .en { display: inline; }
+body.zh-mode .bling .zh { display: inline; }
+
+/* Hero */
+.hero {
+  min-height: 96vh;
+  display: flex; align-items: center;
+  padding: 130px 0 80px;
+}
+.hero .container { width: 100%; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  border: 1px solid var(--line-2);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 32px;
+  letter-spacing: 0.12em;
+}
+.hero-tag .dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--gold);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% {opacity:1; transform:scale(1);} 50% {opacity:.5; transform:scale(.7);} }
+
+h1 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.018em;
+  margin-bottom: 28px;
+  max-width: 16ch;
+}
+h1.en { font-style: italic; }
+h1.zh { font-family: 'Noto Serif SC', serif; }
+body.zh-mode h1.en { display: none; }
+body:not(.zh-mode) h1.zh { display: none; }
+h1 .accent {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--neural) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-lede {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: clamp(18px, 1.7vw, 22px);
+  line-height: 1.55;
+  color: var(--fg-2);
+  max-width: 60ch;
+  margin-bottom: 36px;
+  font-style: italic;
+}
+body.zh-mode .hero-lede { font-family: 'Noto Serif SC', serif; font-style: normal; }
+
+.hero-cta {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 100px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+  border: 1px solid;
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+.btn-primary:hover { box-shadow: 0 0 20px var(--gold-glow); transform: translateY(-1px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line-2);
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+.meta-row {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  letter-spacing: 0.04em;
+}
+.meta-row b { color: var(--gold); font-weight: 500; }
+
+/* Section */
+section.chap {
+  padding: 100px 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+}
+.chap-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.16em;
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 14px;
+}
+.chap-num::before {
+  content: ''; width: 36px; height: 1px;
+  background: var(--gold);
+}
+.chap h2 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: clamp(32px, 4.4vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+  line-height: 1.05;
+  font-style: italic;
+}
+body.zh-mode .chap h2 { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.chap h3 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 36px 0 12px;
+  color: var(--fg);
+}
+body.zh-mode .chap h3 { font-family: 'Noto Serif SC', serif; font-style: normal; }
+
+.chap p {
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--fg-2);
+  margin-bottom: 18px;
+  max-width: 70ch;
+}
+body.zh-mode .chap p { font-family: 'Noto Serif SC', serif; }
+.chap p strong { color: var(--fg); font-weight: 600; }
+.chap p em { color: var(--fg); font-style: italic; }
+
+/* Stat counter section */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 40px 0;
+}
+.stat {
+  background: var(--bg-2);
+  padding: 32px 24px;
+}
+.stat .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 48px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.stat .num .unit {
+  font-size: 0.45em;
+  color: var(--fg-2);
+  margin-left: 6px;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+.stat .label-zh {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 11px;
+  color: var(--fg-3);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  display: block;
+  text-transform: none;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 36px 0;
+}
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 26px;
+  transition: all .25s;
+  border-top: 3px solid var(--gold);
+}
+.card:hover { transform: translateY(-3px); border-color: var(--line-2); }
+.card.neural { border-top-color: var(--neural); }
+.card.warm { border-top-color: var(--warm); }
+.card.rose { border-top-color: var(--rose); }
+.card.emerald { border-top-color: var(--emerald); }
+.card .lab {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+.card.neural .lab { color: var(--neural); }
+.card.warm .lab { color: var(--warm); }
+.card.rose .lab { color: var(--rose); }
+.card.emerald .lab { color: var(--emerald); }
+.card .nm {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--fg);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+body.zh-mode .card .nm { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.card .desc {
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--fg-2);
+}
+body.zh-mode .card .desc { font-family: 'Noto Serif SC', serif; }
+.card .desc strong { color: var(--fg); }
+
+/* Brain network visualization */
+.mind-map-wrap {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 36px 24px;
+  margin: 36px 0;
+  position: relative;
+  overflow: hidden;
+}
+#mind-map { width: 100%; max-width: 720px; display: block; margin: 0 auto; height: auto; }
+.mind-map-info {
+  text-align: center;
+  margin-top: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  letter-spacing: 0.06em;
+  min-height: 22px;
+}
+.mind-node {
+  cursor: pointer;
+  transition: all .25s;
+}
+.mind-node:hover circle { r: 22; filter: drop-shadow(0 0 8px var(--gold)); }
+.mind-node circle { transition: all .25s; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 36px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 96px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--line), var(--gold), var(--neural), var(--line));
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 28px;
+  padding: 18px 0;
+  position: relative;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: 94px; top: 26px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+.tl-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 600;
+  text-align: right;
+  padding-top: 18px;
+  white-space: nowrap;
+}
+.tl-content h5 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--fg);
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+body.zh-mode .tl-content h5 { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.tl-content p {
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--fg-2);
+  margin: 0;
+  max-width: 60ch;
+}
+body.zh-mode .tl-content p { font-family: 'Noto Serif SC', serif; }
+@media (max-width: 720px) {
+  .timeline::before { left: 8px; }
+  .tl-item { grid-template-columns: 60px 1fr; gap: 14px; }
+  .tl-item::before { left: 6px; }
+  .tl-year { text-align: left; padding-top: 0; font-size: 11px; }
+}
+
+/* Quote / Pull */
+.pull {
+  margin: 56px 0;
+  padding: 36px 0;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull blockquote {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.4;
+  color: var(--fg);
+  font-weight: 500;
+  margin-bottom: 14px;
+  letter-spacing: -0.005em;
+}
+body.zh-mode .pull blockquote { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.pull cite {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  letter-spacing: 0.1em;
+  font-style: normal;
+}
+
+/* Newsletter */
+.newsletter {
+  background: var(--bg-2);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 40px;
+  text-align: center;
+  margin: 40px 0;
+  box-shadow: 0 0 30px var(--gold-glow);
+}
+.newsletter h3 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+body.zh-mode .newsletter h3 { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.newsletter p {
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  font-size: 15px;
+  color: var(--fg-2);
+  margin-bottom: 24px;
+  max-width: 50ch;
+  margin-left: auto; margin-right: auto;
+}
+body.zh-mode .newsletter p { font-family: 'Noto Serif SC', serif; }
+.newsletter form {
+  display: flex; gap: 8px;
+  max-width: 480px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newsletter input {
+  flex: 1; min-width: 240px;
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  color: var(--fg);
+  padding: 14px 18px;
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  outline: none;
+  transition: border-color .15s;
+}
+.newsletter input:focus { border-color: var(--gold); }
+.newsletter input::placeholder { color: var(--fg-3); }
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 32px; left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--gold);
+  color: var(--bg);
+  padding: 14px 24px;
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  z-index: 1000;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+  pointer-events: none;
+}
+#toast.show { transform: translateX(-50%) translateY(0); }
+
+/* FAQ accordion */
+.faq-list { margin: 32px 0; max-width: 760px; }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 6px 0;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--fg);
+  font-weight: 500;
+}
+body.zh-mode .faq-item summary { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  color: var(--gold);
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-answer {
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--fg-2);
+  padding: 0 0 22px;
+  max-width: 65ch;
+}
+body.zh-mode .faq-answer { font-family: 'Noto Serif SC', serif; }
+
+/* Filter chips */
+.chips {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 24px 0;
+}
+.chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--fg-2);
+  border: 1px solid var(--line-2);
+  cursor: pointer;
+  transition: all .15s;
+  letter-spacing: 0.04em;
+}
+.chip:hover { color: var(--fg); }
+.chip.active { color: var(--gold); border-color: var(--gold); background: rgba(212,175,55,.08); }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 70px 0 60px;
+  margin-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+.foot-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr; gap: 24px; } }
+.foot-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+.foot-col a {
+  display: block;
+  color: var(--fg-2);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  margin-bottom: 10px;
+  transition: color .15s;
+}
+body.zh-mode .foot-col a { font-family: 'Noto Serif SC', serif; }
+.foot-col a:hover { color: var(--gold); }
+.foot-brand {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--fg);
+  margin-bottom: 12px;
+}
+body.zh-mode .foot-brand { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.foot-brand-zh, body.zh-mode .foot-brand-en { display: none; }
+body.zh-mode .foot-brand-zh { display: block; }
+.foot-tagline {
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--fg-2);
+  line-height: 1.55;
+  max-width: 32ch;
+  margin-bottom: 18px;
+}
+body.zh-mode .foot-tagline { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.foot-bottom {
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--fg-3);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+}
+.foot-bottom a { color: var(--gold); text-decoration: none; }
+
+/* Back to top */
+#back-top {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  cursor: pointer;
+  display: grid; place-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+  z-index: 50;
+}
+#back-top.show { opacity: 1; }
+#back-top:hover { transform: translateY(-2px); box-shadow: 0 0 16px var(--gold-glow); }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s, transform .8s; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  nav .links { display: none; }
+  .hero { min-height: 80vh; padding: 100px 0 50px; }
+  nav { padding: 0 16px; gap: 8px; }
+  nav .brand { font-size: 14px; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="neural-bg"></canvas>
+
+<nav>
+  <a class="brand" href="#">
+    <span class="glyph">
+      <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="#d4af37" stroke-width="1.2"/><circle cx="16" cy="9" r="2.2" fill="#d4af37"/><circle cx="9" cy="20" r="2.2" fill="#d4af37"/><circle cx="23" cy="20" r="2.2" fill="#d4af37"/><line x1="16" y1="9" x2="9" y2="20" stroke="#d4af37" stroke-width="0.7"/><line x1="9" y1="20" x2="23" y2="20" stroke="#d4af37" stroke-width="0.7"/><line x1="23" y1="20" x2="16" y2="9" stroke="#d4af37" stroke-width="0.7"/></svg>
+    </span>
+    <span class="brand-en">The Atlas of Mind</span>
+    <span class="brand-zh">思维之图</span>
+  </a>
+  <div class="links">
+    <a href="#manifesto">01</a>
+    <a href="#brain">02</a>
+    <a href="#methods">03</a>
+    <a href="#models">04</a>
+    <a href="#cognition">05</a>
+    <a href="#decision">06</a>
+    <a href="#creativity">07</a>
+    <a href="#ai">08</a>
+    <a href="#mindmap">09</a>
+    <a href="#timeline">10</a>
+    <a href="#faq">11</a>
+  </div>
+  <div class="ctl-group">
+    <button class="ctl" id="lang-btn" onclick="toggleLang()">EN / 中</button>
+    <button class="ctl" id="theme-btn" onclick="toggleTheme()">☀</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag"><span class="dot"></span> <span class="bling"><span class="en">A monument to the human mind</span><span class="zh">献给人类心智的丰碑</span></span></div>
+    <h1 class="en">Mapping how thought becomes <span class="accent">self</span>.</h1>
+    <h1 class="zh">勘绘思维如何成为<span class="accent">自我</span>。</h1>
+    <p class="hero-lede en">A bilingual digital institution dedicated to the brain, thinking methods, mental models, learning science, decision-making, creativity, consciousness, and the future of intelligence. The most uncharted territory we have left to explore is between our own ears.</p>
+    <p class="hero-lede zh">献给大脑、思维方式、思维模型、学习科学、决策、创造力、意识与智能未来的双语数字机构。我们尚未勘察的最重要疆域，就在我们两耳之间。</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#manifesto"><span class="en">Begin the journey →</span><span class="zh">开启旅程 →</span></a>
+      <a class="btn btn-ghost" href="#mindmap"><span class="en">Explore the map</span><span class="zh">探索图谱</span></a>
+    </div>
+    <div class="meta-row">
+      <span><span class="en">Compiled</span><span class="zh">编纂于</span> · <b>April 2026</b></span>
+      <span><span class="en">Sections</span><span class="zh">章节</span> · <b>11</b></span>
+      <span><span class="en">Mental models</span><span class="zh">思维模型</span> · <b>8</b></span>
+      <span><span class="en">Thinking methods</span><span class="zh">思维方式</span> · <b>6</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 1 MANIFESTO -->
+<section class="chap reveal" id="manifesto">
+  <div class="container narrow">
+    <div class="chap-num">01 · MANIFESTO · 宣言</div>
+    <h2 class="en">Why this exists</h2>
+    <h2 class="zh">为何而存在</h2>
+    <p class="en">For ten thousand years humans have learned to bend matter — to fire, to seed, to steel, to silicon, to satellite. We have learned almost nothing about the substance that does the bending. The brain remains the most complex object in the known universe, and the methods by which it thinks remain mostly invisible to the thinker. <strong>The Atlas of Mind</strong> is an attempt to render that invisibility legible.</p>
+    <p class="zh">一万年来，人类学会了塑造物质——以火、以种子、以钢、以硅、以卫星。但我们几乎不了解那位「塑造者」自身。大脑仍是已知宇宙中最复杂的物体，而它思考所用的方法，对思考者本身大多不可见。<strong>《思维之图》</strong>是把这种不可见性化为可读的尝试。</p>
+    <p class="en">It is not a productivity site. It is not a self-help platform. It is a digital monument — drawing on neuroscience, cognitive science, philosophy, learning theory, and the long history of human inquiry into mind — built around a simple premise: <em>that the next great frontier of civilization is not space, not silicon, not even artificial intelligence. It is understanding the substrate that produces all three.</em></p>
+    <p class="zh">这不是一个效率工具站，也不是一个自我提升平台。这是一座数字纪念碑——汲取神经科学、认知科学、哲学、学习理论与人类心智探究的悠久历史——围绕一个简单前提构建：<em>文明的下一个伟大边疆不是太空，不是硅芯，甚至不是人工智能。是理解产生这一切的基底。</em></p>
+    <div class="pull">
+      <blockquote class="en">"What lies behind us and what lies before us are tiny matters compared to what lies within us."</blockquote>
+      <blockquote class="zh">「我们身后之事与身前之事，与我们内里所藏相比，都微不足道。」</blockquote>
+      <cite>— RALPH WALDO EMERSON · 爱默生</cite>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="chap reveal" id="stats">
+  <div class="container">
+    <div class="chap-num">02 · NUMBERS · 数字</div>
+    <h2 class="en">The mind, in scale</h2>
+    <h2 class="zh">心智的尺度</h2>
+    <p class="en">A handful of figures that begin to convey the magnitude of what every human carries inside their skull. Each one understated; each one will be extended, refined, or replaced as neuroscience progresses through the 21st century.</p>
+    <p class="zh">几个开始呈现「每个人颅骨内所承载之物」量级的数字。每一个都仍然保守；每一个都会随 21 世纪神经科学的推进而延展、精炼或被替代。</p>
+
+    <div class="stats-row">
+      <div class="stat">
+        <div class="num"><span class="counter" data-target="86">0</span><span class="unit">B</span></div>
+        <div class="label">Neurons<span class="label-zh">神经元</span></div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="counter" data-target="100">0</span><span class="unit">T</span></div>
+        <div class="label">Synapses<span class="label-zh">突触连接</span></div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="counter" data-target="20">0</span><span class="unit">W</span></div>
+        <div class="label">Power Drawn<span class="label-zh">能耗（功率）</span></div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="counter" data-target="60">0</span><span class="unit">k</span></div>
+        <div class="label">Thoughts/Day<span class="label-zh">每日念头数</span></div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="counter" data-target="2.5">0</span><span class="unit">PB</span></div>
+        <div class="label">Storage Estimate<span class="label-zh">存储容量估算</span></div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="counter" data-target="1014">0</span><span class="unit"></span></div>
+        <div class="label">Neural Operations / sec<span class="label-zh">每秒神经运算</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 BRAIN -->
+<section class="chap reveal" id="brain">
+  <div class="container narrow">
+    <div class="chap-num">03 · THE BRAIN · 大脑</div>
+    <h2 class="en">The most complex object we know of</h2>
+    <h2 class="zh">已知最复杂之物</h2>
+    <p class="en">Three pounds of fat and water. Ten percent of your body's energy budget. The only structure in the universe known to model itself. The brain is not a computer (the metaphor breaks down quickly), but it is a substrate — biological, electrochemical, plastic — through which everything you have ever experienced has passed.</p>
+    <p class="zh">三磅重的脂肪与水。占据身体能量预算的 10%。宇宙中已知唯一能为自身建模的结构。大脑不是计算机（这个隐喻很快就站不住脚），但它是一个基底——生物的、电化学的、可塑的——你所经历过的一切都曾从中穿过。</p>
+    <p class="en">Modern neuroscience is closer to a 17th-century atlas than to a finished map. We have named the regions; we still cannot read them. Connectomics, cellular imaging, optogenetics, and predictive coding are the four telescopes through which the brain is currently coming into focus.</p>
+    <p class="zh">现代神经科学更像 17 世纪的地图集，而非已完成的地图。我们为各个区域命过名；尚不能读懂它们。连接组学、细胞成像、光遗传学、预测编码是当下让大脑逐渐聚焦的四台望远镜。</p>
+  </div>
+</section>
+
+<!-- 4 THINKING METHODS -->
+<section class="chap reveal" id="methods">
+  <div class="container">
+    <div class="chap-num">04 · THINKING METHODS · 思维方式</div>
+    <h2 class="en">Six tools the mind uses</h2>
+    <h2 class="zh">心智所用的六件工具</h2>
+    <p class="en">Most people default to one or two thinking modes and use them across all situations — even when those situations call for a different tool. The deepest cognitive skill is not "having the right style" but being able to switch deliberately when context changes.</p>
+    <p class="zh">多数人默认使用一两种思维模式，并把它们应用于所有情境——即便情境呼唤不同的工具。最深的认知技能不是「拥有正确的方式」，而是能在情境变化时刻意切换。</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="lab">METHOD 01 · 方法</div>
+        <div class="nm bling"><span class="en">Analytical</span><span class="zh"> · 分析性思维</span></div>
+        <p class="desc en">Decompose a complex problem into bounded sub-parts. Solve each. Reassemble. The default mode of engineering, accounting, science. Reliable but misses emergent properties.</p>
+        <p class="desc zh">把复杂问题分解为边界清晰的子部分。逐一解决。再组装。工程、会计、科学的默认模式。可靠但忽略涌现性质。</p>
+      </div>
+      <div class="card neural">
+        <div class="lab">METHOD 02 · 方法</div>
+        <div class="nm bling"><span class="en">Critical</span><span class="zh"> · 批判性思维</span></div>
+        <p class="desc en">Test claims against evidence, logic, and source quality. Ask "how do you know?" before "what do you mean?" Catches motivated reasoning; can become reflexive negation.</p>
+        <p class="desc zh">用证据、逻辑与信息源质量检验主张。先问「你怎么知道？」再问「你是什么意思？」识破动机性推理；易变为反射性否定。</p>
+      </div>
+      <div class="card emerald">
+        <div class="lab">METHOD 03 · 方法</div>
+        <div class="nm bling"><span class="en">Systems</span><span class="zh"> · 系统性思维</span></div>
+        <p class="desc en">Behavior emerges from structure: stocks, flows, feedback loops. Map the loop before reaching for the lever. Reveals counter-intuitive interventions; can paralyze under scale.</p>
+        <p class="desc zh">行为由结构涌现：存量、流量、反馈回路。在按下杠杆之前先映射回路。揭示反直觉干预；规模过大时易陷瘫痪。</p>
+      </div>
+      <div class="card warm">
+        <div class="lab">METHOD 04 · 方法</div>
+        <div class="nm bling"><span class="en">First-Principles</span><span class="zh"> · 第一性原理</span></div>
+        <p class="desc en">Strip the problem down to physical or logical primitives. Refuse to reason by analogy. Rebuild upward. Slow but breaks priors. Unlocks 10× moves.</p>
+        <p class="desc zh">把问题剥离到物理或逻辑基元。拒绝以类比推理。自下而上重建。慢但能击穿成见。解锁十倍突破。</p>
+      </div>
+      <div class="card rose">
+        <div class="lab">METHOD 05 · 方法</div>
+        <div class="nm bling"><span class="en">Lateral</span><span class="zh"> · 横向思维</span></div>
+        <p class="desc en">Edward de Bono. Approach the problem from oblique angles — provocations, random word, reversal. Specifically designed to escape the dominant frame. Useless when the frame is already right.</p>
+        <p class="desc zh">由 de Bono 提出。从倾斜角度切入问题——挑衅性命题、随机词、反转。专为逃离主导框架而设计。当框架本就正确时无用。</p>
+      </div>
+      <div class="card emerald">
+        <div class="lab">METHOD 06 · 方法</div>
+        <div class="nm bling"><span class="en">Probabilistic</span><span class="zh"> · 概率思维</span></div>
+        <p class="desc en">Treat outcomes as distributions, not single values. Bayes; expected value; calibrated uncertainty. Robust under uncertainty; counter-intuitive to most humans.</p>
+        <p class="desc zh">把结果视为分布而非单一值。贝叶斯；期望值；校准的不确定性。在不确定下稳健；对多数人反直觉。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 MENTAL MODELS -->
+<section class="chap reveal" id="models">
+  <div class="container">
+    <div class="chap-num">05 · MENTAL MODELS · 思维模型</div>
+    <h2 class="en">Eight reusable lenses</h2>
+    <h2 class="zh">八面可重用的透镜</h2>
+    <p class="en">A mental model is a compressed pattern of cause and effect that can be reapplied across domains. Charlie Munger collected hundreds; we present eight here that punch above their weight. Master one a year; in a decade you have a different mind.</p>
+    <p class="zh">思维模型是一种因果关系的压缩模式，可跨领域复用。Charlie Munger 收集了数百个；我们在此呈现八个最具效用的。每年掌握一个；十年后你将拥有一颗不同的心智。</p>
+
+    <div class="cards">
+      <div class="card"><div class="lab">MODEL 01</div><div class="nm bling"><span class="en">Inversion</span><span class="zh"> · 反向思考</span></div><p class="desc en">"What would guarantee failure?" Then avoid that. Reverse-engineer the disaster.</p><p class="desc zh">「什么能保证失败？」然后避开它。逆向工程灾难。</p></div>
+      <div class="card neural"><div class="lab">MODEL 02</div><div class="nm bling"><span class="en">Second-Order Effects</span><span class="zh"> · 二阶效应</span></div><p class="desc en">"And then what happens?" Most decisions are evaluated only on first-order effects. The interesting consequences are downstream.</p><p class="desc zh">「然后呢？」多数决策只在一阶效应层评估。有趣的后果在下游。</p></div>
+      <div class="card warm"><div class="lab">MODEL 03</div><div class="nm bling"><span class="en">Opportunity Cost</span><span class="zh"> · 机会成本</span></div><p class="desc en">The true cost of any choice is the next-best alternative you forfeit. Money is rarely the real cost; time and attention almost always are.</p><p class="desc zh">任何选择的真正代价是你放弃的次优选项。金钱很少是真正的代价；时间与注意力几乎总是。</p></div>
+      <div class="card rose"><div class="lab">MODEL 04</div><div class="nm bling"><span class="en">Margin of Safety</span><span class="zh"> · 安全边际</span></div><p class="desc en">Build for failure modes you cannot predict. Engineering, finance, and life all benefit from buffer beyond what the model suggests.</p><p class="desc zh">为你无法预测的失败模式留余地。工程、金融、人生皆受益于「超出模型所示」的缓冲。</p></div>
+      <div class="card emerald"><div class="lab">MODEL 05</div><div class="nm bling"><span class="en">Power Laws</span><span class="zh"> · 幂律分布</span></div><p class="desc en">Most outcomes are not bell-curve. A few of anything dominate; the rest cluster near zero. Bestselling books, startups, friendships, ideas.</p><p class="desc zh">多数结果不服从正态分布。少数事物主导；其余聚集近零。畅销书、创业公司、友谊、想法皆如此。</p></div>
+      <div class="card"><div class="lab">MODEL 06</div><div class="nm bling"><span class="en">Compounding</span><span class="zh"> · 复利</span></div><p class="desc en">Tiny gains, repeated, beat large gains, sporadic. The most under-appreciated force in human affairs — financial, intellectual, relational.</p><p class="desc zh">微小但持续的收益胜过偶发的巨大收益。人类事务中最被低估的力量——财务、智识、关系皆如是。</p></div>
+      <div class="card neural"><div class="lab">MODEL 07</div><div class="nm bling"><span class="en">Bayesian Updating</span><span class="zh"> · 贝叶斯更新</span></div><p class="desc en">Hold beliefs as probabilities, not certainties. Update them in proportion to evidence. The hardest thing about this model is doing it on yourself.</p><p class="desc zh">把信念视为概率而非确定性。按证据比例更新。这个模型最难之处是对自己使用它。</p></div>
+      <div class="card warm"><div class="lab">MODEL 08</div><div class="nm bling"><span class="en">Local vs Global Optima</span><span class="zh"> · 局部最优 vs 全局最优</span></div><p class="desc en">A peak you can see from where you stand may not be the highest peak. Sometimes you must descend before you can ascend further.</p><p class="desc zh">从你立足之处所见的山峰未必是最高峰。有时你必须先下降才能继续上升。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 COGNITION & CONSCIOUSNESS -->
+<section class="chap reveal" id="cognition">
+  <div class="container narrow">
+    <div class="chap-num">06 · COGNITION &amp; CONSCIOUSNESS · 认知与意识</div>
+    <h2 class="en">From neurons to qualia</h2>
+    <h2 class="zh">从神经元到感质</h2>
+    <p class="en">Six rungs lie between matter and "what-it-is-like-to-be-you." The first three are well understood; the last three are under active scientific siege. Between rung five and rung six lies the <em>hard problem of consciousness</em> — why any of this should feel like anything.</p>
+    <p class="zh">在物质与「身为你之感」之间，有六阶之距。前三阶已被良好理解；后三阶仍在科学的积极围攻中。第五与第六阶之间，是<em>意识的难题</em>——为何这一切「应该有任何感受」。</p>
+    <p class="en">Three contemporary theories compete: <strong>Integrated Information Theory</strong> (Tononi) — consciousness is integrated information, measurable as Φ. <strong>Global Workspace Theory</strong> (Dehaene) — consciousness is the broadcast of a contender across cortical regions. <strong>Higher-Order Theory</strong> — consciousness is having a thought about a thought. None has been falsified; none is fully accepted.</p>
+    <p class="zh">三种当代理论竞争：<strong>整合信息论</strong>（Tononi）——意识即整合信息，可由 Φ 量化。<strong>全局工作空间理论</strong>（Dehaene）——意识是某竞争者跨皮层区域的广播。<strong>高阶理论</strong>——意识是「关于想法的想法」。无一被证伪；无一被完全接受。</p>
+    <div class="pull">
+      <blockquote class="en">"The question is not whether machines think but whether men do."</blockquote>
+      <blockquote class="zh">「问题不在于机器是否能思考，而在于人是否在思考。」</blockquote>
+      <cite>— B.F. SKINNER · 斯金纳</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 7 DECISION -->
+<section class="chap reveal" id="decision">
+  <div class="container narrow">
+    <div class="chap-num">07 · DECISION · 决策</div>
+    <h2 class="en">Fast vs slow · System 1 vs System 2</h2>
+    <h2 class="zh">快与慢 · 系统 1 vs 系统 2</h2>
+    <p class="en">Daniel Kahneman's framing (<em>Thinking, Fast and Slow</em>, 2011): two systems run in parallel. <strong>System 1</strong> is fast, automatic, effortless, often right in familiar contexts and confidently wrong outside them. <strong>System 2</strong> is slow, deliberate, effortful, accurate but expensive. Most cognitive errors are System 1 misfires that System 2 failed to catch.</p>
+    <p class="zh">Daniel Kahneman 的框架（《思考，快与慢》，2011）：两套系统并行。<strong>系统 1</strong> 快、自动、轻松，在熟悉情境中常对，在外则自信而错。<strong>系统 2</strong> 慢、刻意、费力，准确但昂贵。多数认知错误是系统 2 没能拦截的系统 1 失火。</p>
+    <p class="en">The mature decision-maker has not eliminated System 1 — that is impossible and would be undesirable. They have learned to <em>recognize when each is appropriate</em> and to invoke System 2 deliberately for high-stakes, unfamiliar, or counter-intuitive choices. The recognition itself is a System 2 skill.</p>
+    <p class="zh">成熟的决策者并未消除系统 1——那不可能也不可取。他们学会<em>识别两者各自合适的时刻</em>，并在高赌注、陌生或反直觉选择中刻意调用系统 2。这种识别本身即是一项系统 2 技能。</p>
+  </div>
+</section>
+
+<!-- 8 CREATIVITY -->
+<section class="chap reveal" id="creativity">
+  <div class="container narrow">
+    <div class="chap-num">08 · CREATIVITY · 创造力</div>
+    <h2 class="en">Divergent then convergent</h2>
+    <h2 class="zh">先发散，后收敛</h2>
+    <p class="en">Creativity is not a single act. It is a two-stroke engine. Stroke one — <strong>divergent thinking</strong> — generates options. Many, wide, weird, deliberately not-yet-judged. Stroke two — <strong>convergent thinking</strong> — narrows, evaluates, eliminates, ships. People who can do only one make either piles of unmade decisions or polished versions of the obvious.</p>
+    <p class="zh">创造力不是单一动作。它是一台双冲程发动机。冲程一——<strong>发散性思维</strong>——产生选项。多、广、怪、刻意不予评判。冲程二——<strong>收敛性思维</strong>——筛选、评估、剔除、交付。只能做其一者，要么得到一堆「未做的决定」，要么得到「显然之物」的精修版。</p>
+    <p class="en">The schedule matters. Insights almost never come during forced ideation. They come in the shower, on a walk, in the moment between one task and the next. The mind requires the pressure of the question and then the release of attention to deliver the answer.</p>
+    <p class="zh">节律重要。洞见几乎从不来自强制构思。它们来自淋浴、散步、一项任务与下一项之间。心智需要先承受问题的压力，再释放注意力，才能交付答案。</p>
+  </div>
+</section>
+
+<!-- 9 BRAIN & AI -->
+<section class="chap reveal" id="ai">
+  <div class="container narrow">
+    <div class="chap-num">09 · BRAIN &amp; AI · 大脑与人工智能</div>
+    <h2 class="en">The two intelligences in conversation</h2>
+    <h2 class="zh">两种智能的对话</h2>
+    <p class="en">For 6 million years, only one species could think. Now there are two systems on Earth that can manipulate symbols at scale — biological brains and artificial neural networks. They are not the same kind of intelligence. The brain is embodied, evolved, finite, slow, and grounded in a life. AI is disembodied, designed, vast, fast, and grounded in text. Each is strong where the other is weak.</p>
+    <p class="zh">六百万年来，只有一个物种能思考。如今地球上有两种系统能在规模上操纵符号——生物大脑与人工神经网络。它们不是同一类智能。大脑具身、演化而成、有限、缓慢、扎根于生命。AI 非具身、被设计、广博、迅疾、扎根于文本。各自之长，正是对方之短。</p>
+    <p class="en">The most likely shape of the next decade of cognition is neither pure human nor pure AI but a third thing — small teams of humans wielding fleets of AI agents. Humans choose what is worth knowing; AI explores the space of possible knowing; humans ratify what counts. The unit of cognition is becoming hybrid.</p>
+    <p class="zh">未来十年认知最可能的形态既非纯人类亦非纯 AI，而是第三者——由 AI 智能体集群武装的小型人类团队。人类选择「什么值得被认知」；AI 探索「可能认知」的空间；人类确认「什么算数」。认知的基本单位正在变为混合体。</p>
+  </div>
+</section>
+
+<!-- 10 INTERACTIVE MIND MAP -->
+<section class="chap reveal" id="mindmap">
+  <div class="container">
+    <div class="chap-num">10 · MAP OF THE MIND · 思维地图</div>
+    <h2 class="en">An interactive cartography</h2>
+    <h2 class="zh">一份交互式心智图</h2>
+    <p class="en">Click any node to learn what it is and how it connects. The map below is a starting cartography — eight major regions of the mind, eight bridges between them, eight gateways out. The map is not the territory; this map exists to make the territory askable.</p>
+    <p class="zh">点击任一节点以了解其为何物、如何连接。下方地图是一份起点制图——心智的八个主要区域，八座连接它们的桥，八个通向外部的关口。地图非疆域；此图之存在，是为了让疆域变得「可询问」。</p>
+
+    <div class="mind-map-wrap">
+      <svg id="mind-map" viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#d4af37" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- Center glow -->
+        <circle cx="360" cy="240" r="80" fill="url(#centerGlow)"/>
+        <!-- Connection lines -->
+        <g stroke="#2c2f4d" stroke-width="0.6">
+          <line x1="360" y1="240" x2="180" y2="100"/>
+          <line x1="360" y1="240" x2="540" y2="100"/>
+          <line x1="360" y1="240" x2="120" y2="240"/>
+          <line x1="360" y1="240" x2="600" y2="240"/>
+          <line x1="360" y1="240" x2="180" y2="380"/>
+          <line x1="360" y1="240" x2="540" y2="380"/>
+          <line x1="360" y1="240" x2="360" y2="80"/>
+          <line x1="360" y1="240" x2="360" y2="400"/>
+          <!-- Cross-connections -->
+          <line x1="180" y1="100" x2="540" y2="100" stroke-dasharray="3 3" stroke="#1f2138"/>
+          <line x1="120" y1="240" x2="180" y2="100"/>
+          <line x1="540" y1="100" x2="600" y2="240"/>
+          <line x1="120" y1="240" x2="180" y2="380"/>
+          <line x1="600" y1="240" x2="540" y2="380"/>
+        </g>
+        <!-- Center node -->
+        <g class="mind-node" data-id="self">
+          <circle cx="360" cy="240" r="22" fill="#08080d" stroke="#d4af37" stroke-width="1.5"/>
+          <text x="360" y="244" font-family="Cormorant Garamond" font-style="italic" font-size="14" fill="#d4af37" text-anchor="middle">SELF</text>
+        </g>
+        <!-- Surrounding nodes -->
+        <g class="mind-node" data-id="perception"><circle cx="360" cy="80" r="18" fill="#08080d" stroke="#7dd3fc" stroke-width="1.4"/><text x="360" y="84" font-family="JetBrains Mono" font-size="9" fill="#7dd3fc" text-anchor="middle">PERCEPT</text><text x="360" y="64" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">感知</text></g>
+        <g class="mind-node" data-id="memory"><circle cx="180" cy="100" r="18" fill="#08080d" stroke="#7dd3fc" stroke-width="1.4"/><text x="180" y="104" font-family="JetBrains Mono" font-size="9" fill="#7dd3fc" text-anchor="middle">MEMORY</text><text x="180" y="84" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">记忆</text></g>
+        <g class="mind-node" data-id="attention"><circle cx="540" cy="100" r="18" fill="#08080d" stroke="#7dd3fc" stroke-width="1.4"/><text x="540" y="104" font-family="JetBrains Mono" font-size="9" fill="#7dd3fc" text-anchor="middle">ATTENT.</text><text x="540" y="84" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">注意</text></g>
+        <g class="mind-node" data-id="emotion"><circle cx="120" cy="240" r="18" fill="#08080d" stroke="#fb7185" stroke-width="1.4"/><text x="120" y="244" font-family="JetBrains Mono" font-size="9" fill="#fb7185" text-anchor="middle">EMOTION</text><text x="120" y="270" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">情绪</text></g>
+        <g class="mind-node" data-id="reasoning"><circle cx="600" cy="240" r="18" fill="#08080d" stroke="#34d399" stroke-width="1.4"/><text x="600" y="244" font-family="JetBrains Mono" font-size="9" fill="#34d399" text-anchor="middle">REASON</text><text x="600" y="270" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">推理</text></g>
+        <g class="mind-node" data-id="language"><circle cx="180" cy="380" r="18" fill="#08080d" stroke="#f59e0b" stroke-width="1.4"/><text x="180" y="384" font-family="JetBrains Mono" font-size="9" fill="#f59e0b" text-anchor="middle">LANG.</text><text x="180" y="406" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">语言</text></g>
+        <g class="mind-node" data-id="imagination"><circle cx="540" cy="380" r="18" fill="#08080d" stroke="#f59e0b" stroke-width="1.4"/><text x="540" y="384" font-family="JetBrains Mono" font-size="9" fill="#f59e0b" text-anchor="middle">IMAGIN.</text><text x="540" y="406" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">想象</text></g>
+        <g class="mind-node" data-id="action"><circle cx="360" cy="400" r="18" fill="#08080d" stroke="#34d399" stroke-width="1.4"/><text x="360" y="404" font-family="JetBrains Mono" font-size="9" fill="#34d399" text-anchor="middle">ACTION</text><text x="360" y="426" font-family="Noto Sans SC" font-size="9" fill="#b3ad96" text-anchor="middle">行动</text></g>
+      </svg>
+      <div class="mind-map-info" id="mind-info"><span class="en">Click a node to learn more · 点击节点查看详情</span><span class="zh">点击节点查看详情 · Click a node</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 TIMELINE -->
+<section class="chap reveal" id="timeline">
+  <div class="container narrow">
+    <div class="chap-num">11 · TIMELINE · 时间轴</div>
+    <h2 class="en">Humanity learning about its own mind</h2>
+    <h2 class="zh">人类对自身心智的认识史</h2>
+    <p class="en">A short, deliberately incomplete history of when we figured out what about ourselves. Each entry names a discovery; each understates the work behind it.</p>
+    <p class="zh">关于「我们何时弄懂了关于自己什么」的简短而有意不完整的历史。每一条命名一项发现；每一条都低估了其背后的工作。</p>
+
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">~500 BCE</div><div class="tl-content"><h5 class="en">The Examined Life · Socratic dialogue</h5><h5 class="zh">被审视的生活 · 苏格拉底对话</h5><p class="en">Socrates establishes that introspective inquiry — "know thyself" — is the foundation of any meaningful philosophy.</p><p class="zh">苏格拉底确立了内省探究——「认识你自己」——是任何有意义哲学的基础。</p></div></div>
+      <div class="tl-item"><div class="tl-year">~350 BCE</div><div class="tl-content"><h5 class="en">Aristotle's <em>De Anima</em></h5><h5 class="zh">亚里士多德《论灵魂》</h5><p class="en">First systematic treatise on the mind. Distinguishes nutritive, sensitive, and rational souls — the first cognitive taxonomy.</p><p class="zh">关于心智的首部系统论著。区分营养性、感知性与理性灵魂——首个认知分类法。</p></div></div>
+      <div class="tl-item"><div class="tl-year">1641</div><div class="tl-content"><h5 class="en">Descartes' <em>Meditations</em></h5><h5 class="zh">笛卡尔《沉思集》</h5><p class="en">Cogito, ergo sum. Mind-body dualism. The frame Western philosophy will spend the next 380 years trying to escape.</p><p class="zh">我思故我在。心物二元论。西方哲学之后 380 年都在试图逃离的框架。</p></div></div>
+      <div class="tl-item"><div class="tl-year">1879</div><div class="tl-content"><h5 class="en">Wilhelm Wundt opens the first psychology lab</h5><h5 class="zh">冯特创立首个心理学实验室</h5><p class="en">Leipzig, Germany. Psychology becomes a science by becoming experimental. Until this date it was philosophy.</p><p class="zh">德国莱比锡。心理学因转向实验而成为科学。在此之前，它属于哲学。</p></div></div>
+      <div class="tl-item"><div class="tl-year">1900</div><div class="tl-content"><h5 class="en">Freud's <em>Interpretation of Dreams</em></h5><h5 class="zh">弗洛伊德《释梦》</h5><p class="en">The unconscious enters mainstream Western thought. Most of Freud's specifics will be overturned; the framing of "depth psychology" will not.</p><p class="zh">无意识进入西方主流思想。弗洛伊德的多数具体观点将被推翻；「深度心理学」的框架则不会。</p></div></div>
+      <div class="tl-item"><div class="tl-year">1948</div><div class="tl-content"><h5 class="en">Shannon's <em>Mathematical Theory of Communication</em></h5><h5 class="zh">香农《通信的数学理论》</h5><p class="en">Information becomes a measurable quantity. Cognitive science becomes possible because thought becomes formally tractable.</p><p class="zh">信息成为可度量的量。认知科学因「思考可被形式化处理」而成为可能。</p></div></div>
+      <div class="tl-item"><div class="tl-year">1956</div><div class="tl-content"><h5 class="en">Dartmouth Workshop · Birth of AI</h5><h5 class="zh">达特茅斯会议 · AI 诞生</h5><p class="en">McCarthy, Minsky, Shannon, Rochester. Coining of "artificial intelligence." The first explicit attempt to model thought in machines.</p><p class="zh">麦卡锡、明斯基、香农、罗切斯特。「人工智能」一词诞生。首次明确尝试在机器中建模思考。</p></div></div>
+      <div class="tl-item"><div class="tl-year">1957</div><div class="tl-content"><h5 class="en">Chomsky's <em>Syntactic Structures</em></h5><h5 class="zh">乔姆斯基《句法结构》</h5><p class="en">Language as an innate cognitive faculty. The cognitive revolution begins; behaviorism begins its decline.</p><p class="zh">语言作为先天认知能力。认知革命开始；行为主义开始衰落。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2002</div><div class="tl-content"><h5 class="en">Kahneman wins the Nobel Prize in Economics</h5><h5 class="zh">卡尼曼获诺贝尔经济学奖</h5><p class="en">For prospect theory. The work that becomes <em>Thinking, Fast and Slow</em>. Cognitive bias enters public vocabulary.</p><p class="zh">凭前景理论获奖。该工作后来汇成《思考，快与慢》。认知偏误进入公共词汇。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2012</div><div class="tl-content"><h5 class="en">Deep Learning takes off · AlexNet wins ImageNet</h5><h5 class="zh">深度学习起飞 · AlexNet 赢得 ImageNet</h5><p class="en">Artificial neural networks begin to perceive. The "AI winter" ends. The path to GPT, AlphaFold, and beyond opens.</p><p class="zh">人工神经网络开始感知。「AI 寒冬」结束。通往 GPT、AlphaFold 及更远之路打开。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2026</div><div class="tl-content"><h5 class="en">Where we are now</h5><h5 class="zh">当下所处</h5><p class="en">Frontier AI models reason about novel situations in ways no non-human animal ever has — but still cannot reliably introspect, want, or feel. The brain remains the only known instance of consciousness. The atlas continues.</p><p class="zh">前沿 AI 模型对新情境进行任何非人动物所未及的推理——但仍不能可靠地内省、欲望或感受。大脑仍是已知意识的唯一实例。图谱仍在延展。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 FAQ -->
+<section class="chap reveal" id="faq">
+  <div class="container narrow">
+    <div class="chap-num">12 · FAQ · 常见问题</div>
+    <h2 class="en">Honest answers to fair questions</h2>
+    <h2 class="zh">对合理问题的诚实回答</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary><span class="en">Is "thinking better" actually teachable?</span><span class="zh">「更好地思考」真的可被教授吗？</span></summary>
+        <div class="faq-answer en">Partially yes. The structural moves — Bayesian updating, second-order effects, inversion, switching between thinking modes — are demonstrably teachable and improve outcomes. The harder skill — calibration of when to apply which — only comes from sustained practice with feedback.</div>
+        <div class="faq-answer zh">部分是的。结构性动作——贝叶斯更新、二阶效应、反向思考、在思维模式间切换——可教且能改善结果。更难的技能——「何时应用哪一种」的校准——只能来自有反馈的持续练习。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="en">Will AI make human thinking obsolete?</span><span class="zh">AI 会让人类思维过时吗？</span></summary>
+        <div class="faq-answer en">No, but it will reshape what human thinking is for. The sub-skills of "fast retrieval" and "abstract pattern-matching across vast text" are being commoditized. What remains uniquely human is taste, embodied judgment, moral context, and the act of choosing what is worth attending to in the first place.</div>
+        <div class="faq-answer zh">不会，但它将重塑人类思维之用。「快速检索」与「跨海量文本的抽象模式匹配」这些子技能正在商品化。人类独有的，仍是品味、具身判断、道德语境，以及「首先选择什么值得关注」这一行为。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="en">Why bilingual?</span><span class="zh">为何双语？</span></summary>
+        <div class="faq-answer en">Because the major literatures of cognitive science have developed on parallel tracks in English and Chinese, and the cross-pollination has been thinner than it should be. A bilingual atlas of mind is also an act of translation — of not just words, but of conceptual frames between two of humanity's most influential intellectual traditions.</div>
+        <div class="faq-answer zh">因为认知科学的主要文献在英语与中文中沿平行轨道发展，而其交叉传播本应远比现状更密。一份双语的心智图谱也是一项翻译行为——不仅翻译词汇，更翻译人类两大最具影响力的思想传统之间的概念框架。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="en">What is "self," scientifically?</span><span class="zh">从科学角度，「自我」是什么？</span></summary>
+        <div class="faq-answer en">A persistent narrative the brain constructs about the unified actor it presumes to be. Modern neuroscience suggests "self" is not a thing but a process — a continuously updated story made of memory, body-state, anticipation, and social position. The story is real even if its protagonist is a construction.</div>
+        <div class="faq-answer zh">大脑为「它所假定的统一行动者」所构造的持续叙事。现代神经科学暗示「自我」不是物件而是过程——由记忆、身体状态、预期与社会位置持续更新而成的故事。即便主角是构造之物，故事本身仍是真实的。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="en">Why does this exist if you can't sell it?</span><span class="zh">如果无法变现，为什么还要存在？</span></summary>
+        <div class="faq-answer en">Because the things humans build for sale are not the only things humans build. Cathedrals, libraries, atlases, and parks were not built to be monetized. Most of civilization that endures was built because someone decided it should exist. This is one of those.</div>
+        <div class="faq-answer zh">因为人类所造之物不只用于出售。教堂、图书馆、地图集、公园皆非为变现而建。文明中真正长存之物，多数是因为某人决定它应当存在。本物即是其一。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER / JOIN -->
+<section class="chap reveal" id="join">
+  <div class="container narrow">
+    <div class="newsletter">
+      <h3 class="en">Join the atlas</h3>
+      <h3 class="zh">加入图谱</h3>
+      <p class="en">A monthly dispatch — one essay, one mental model, one mind-related discovery from the past 30 days. No spam, no upsell. Currently 0 subscribers because we just opened.</p>
+      <p class="zh">月度邮件——一篇随笔、一个思维模型、一项过去 30 天的心智相关发现。无垃圾邮件、无追加销售。当前订阅者：0，因为我们刚刚开张。</p>
+      <form onsubmit="event.preventDefault(); subscribe(this);">
+        <input type="email" placeholder="your@email.com" required>
+        <button class="btn btn-primary" type="submit"><span class="en">Subscribe</span><span class="zh">订阅</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <span class="foot-brand-en">The Atlas of Mind</span>
+          <span class="foot-brand-zh">思维之图</span>
+        </div>
+        <p class="foot-tagline en">A digital monument to the brain, thinking, and the future of cognition.</p>
+        <p class="foot-tagline zh">献给大脑、思维与认知未来的数字纪念碑。</p>
+      </div>
+      <div class="foot-col">
+        <h4><span class="en">Sections</span><span class="zh">章节</span></h4>
+        <a href="#manifesto"><span class="en">Manifesto</span><span class="zh">宣言</span></a>
+        <a href="#brain"><span class="en">The Brain</span><span class="zh">大脑</span></a>
+        <a href="#methods"><span class="en">Thinking Methods</span><span class="zh">思维方式</span></a>
+        <a href="#models"><span class="en">Mental Models</span><span class="zh">思维模型</span></a>
+        <a href="#cognition"><span class="en">Consciousness</span><span class="zh">意识</span></a>
+      </div>
+      <div class="foot-col">
+        <h4><span class="en">Explore</span><span class="zh">探索</span></h4>
+        <a href="#decision"><span class="en">Decision Science</span><span class="zh">决策科学</span></a>
+        <a href="#creativity"><span class="en">Creativity</span><span class="zh">创造力</span></a>
+        <a href="#ai"><span class="en">Brain &amp; AI</span><span class="zh">大脑与 AI</span></a>
+        <a href="#mindmap"><span class="en">Map of Mind</span><span class="zh">心智地图</span></a>
+        <a href="#timeline"><span class="en">Timeline</span><span class="zh">时间轴</span></a>
+      </div>
+      <div class="foot-col">
+        <h4><span class="en">Sister Sites</span><span class="zh">姊妹站点</span></h4>
+        <a href="https://omega.psyverse.fun">omega · 宇宙起源</a>
+        <a href="https://urcde.psyverse.fun">urcde · 文明决策</a>
+        <a href="https://minds.psyverse.fun">minds · 思维方式</a>
+        <a href="https://seeker.psyverse.fun">seeker · 探索者</a>
+        <a href="https://psyverse.fun">psyverse · 主站</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="en">Part of the</span><span class="zh">收录于</span> <a href="https://psyverse.fun">Psyverse</a> <span class="en">portfolio</span><span class="zh">作品集</span></span>
+      <span><span class="en">Compiled April 2026</span><span class="zh">编纂于 2026 年 4 月</span></span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<div id="toast"></div>
+
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+<script>
+// Theme + Lang persistence
+function loadPrefs() {
+  const lang = localStorage.getItem('aom-lang');
+  const theme = localStorage.getItem('aom-theme');
+  if (lang === 'zh') document.body.classList.add('zh-mode');
+  if (theme === 'light') document.body.classList.add('light');
+  updateThemeBtn();
+}
+function toggleLang() {
+  document.body.classList.toggle('zh-mode');
+  localStorage.setItem('aom-lang', document.body.classList.contains('zh-mode') ? 'zh' : 'en');
+  document.documentElement.lang = document.body.classList.contains('zh-mode') ? 'zh-CN' : 'en';
+}
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  localStorage.setItem('aom-theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  updateThemeBtn();
+}
+function updateThemeBtn() {
+  document.getElementById('theme-btn').textContent = document.body.classList.contains('light') ? '☾' : '☀';
+}
+loadPrefs();
+
+// Neural background
+(function () {
+  const c = document.getElementById('neural-bg');
+  const ctx = c.getContext('2d');
+  let nodes = [];
+  function resize() {
+    c.width = window.innerWidth; c.height = window.innerHeight;
+    const count = Math.min(60, Math.floor((c.width * c.height) / 25000));
+    nodes = Array.from({length: count}, () => ({
+      x: Math.random() * c.width, y: Math.random() * c.height,
+      vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+      r: Math.random() * 1.4 + 0.5,
+    }));
+  }
+  resize(); window.addEventListener('resize', resize);
+  function draw() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    const isLight = document.body.classList.contains('light');
+    const lineColor = isLight ? '212, 175, 55' : '212, 175, 55';
+    // Lines
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i+1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if (d < 140) {
+          const a = (1 - d/140) * 0.18;
+          ctx.strokeStyle = `rgba(${lineColor}, ${a})`;
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    // Nodes
+    for (const n of nodes) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > c.width) n.vx = -n.vx;
+      if (n.y < 0 || n.y > c.height) n.vy = -n.vy;
+      ctx.fillStyle = `rgba(${lineColor}, 0.6)`;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// Reveal on scroll
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.06 });
+  els.forEach((el) => io.observe(el));
+})();
+
+// Stat counter animation
+(function () {
+  const counters = document.querySelectorAll('.counter');
+  const startCounter = (el) => {
+    const target = parseFloat(el.dataset.target);
+    const duration = 1800;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const v = target * eased;
+      el.textContent = (target % 1 !== 0) ? v.toFixed(1) : Math.floor(v).toLocaleString();
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = (target % 1 !== 0) ? target.toFixed(1) : Math.floor(target).toLocaleString();
+    };
+    requestAnimationFrame(tick);
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting && !e.target.dataset.done) {
+        startCounter(e.target);
+        e.target.dataset.done = '1';
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach((c) => io.observe(c));
+})();
+
+// Mind map node click
+const MIND_NODES = {
+  self: { en: "SELF · the persistent narrative the brain constructs about itself", zh: "自我 · 大脑为自身构造的持续叙事" },
+  perception: { en: "PERCEPTION · the act of converting energy patterns into experience", zh: "感知 · 将能量模式转换为经验的行为" },
+  memory: { en: "MEMORY · not a recording, but a reconstruction performed each time you remember", zh: "记忆 · 不是录像，而是每次回忆时都重新构造的过程" },
+  attention: { en: "ATTENTION · the gating of what reaches awareness; the scarce resource", zh: "注意 · 决定什么进入觉知的门控；最稀缺的资源" },
+  emotion: { en: "EMOTION · the body's appraisal made conscious; faster than thought", zh: "情绪 · 被意识化的身体评估；比思考更快" },
+  reasoning: { en: "REASONING · the slow, deliberate composition of inferences from premises", zh: "推理 · 缓慢、刻意地从前提构成推论" },
+  language: { en: "LANGUAGE · symbolic compression of thought; possibly its scaffold", zh: "语言 · 思考的符号压缩；可能也是其脚手架" },
+  imagination: { en: "IMAGINATION · the capacity to model what is not yet, was not, or could not be", zh: "想象 · 建模「尚未、未曾或不可能」之事的能力" },
+  action: { en: "ACTION · embodied execution; thought's only visible output", zh: "行动 · 具身执行；思考唯一可见的产出" },
+};
+document.querySelectorAll('.mind-node').forEach(node => {
+  node.addEventListener('click', () => {
+    const id = node.dataset.id;
+    const data = MIND_NODES[id];
+    const info = document.getElementById('mind-info');
+    info.innerHTML = `<span class="en">${data.en}</span><span class="zh">${data.zh}</span>`;
+  });
+});
+
+// Subscribe (toast simulation)
+function subscribe(form) {
+  const email = form.querySelector('input').value;
+  const toast = document.getElementById('toast');
+  const isZh = document.body.classList.contains('zh-mode');
+  toast.textContent = isZh ? `已收录 · ${email}` : `Subscribed · ${email}`;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+  form.reset();
+}
+
+// Back to top
+window.addEventListener('scroll', () => {
+  document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
+</script>
+</body>
+</html>
